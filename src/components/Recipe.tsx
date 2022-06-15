@@ -11,6 +11,7 @@ const Recipe = (props: { recipe: iRecipe }) => {
                     src={recipe.strMealThumb || "../../public/logo192.png"}
                     alt={recipe.strMeal}
                 />
+                <p>{recipe.strMeal}</p>
             </div>
             <p>
                 {recipe.strTags.split(",").map((rec) => (

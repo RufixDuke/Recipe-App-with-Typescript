@@ -14,9 +14,9 @@ function App() {
         return (await result.json()).results;
     };
 
-    const search = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const form = e.target as HTMLFormElement;
+    const search = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const form = event.target as HTMLFormElement;
         const input = form.querySelector("#searchText") as HTMLInputElement;
         setRecipeSearch(input.value);
         console.log(setRecipeSearch(input.value));
@@ -36,7 +36,7 @@ function App() {
     return (
         <div className="App">
             <h2>Recipe App</h2>
-            <form className="searchForm" onSubmit={(e) => search(e)}>
+            <form className="searchForm" onSubmit={(event) => search(event)}>
                 <input
                     type="text"
                     id="searchText"
