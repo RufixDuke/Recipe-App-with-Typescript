@@ -42,7 +42,7 @@ function App() {
                     placeholder="Enter your recipe....."
                     // onChange={(e) => setRecipeSearch(e)}
                 />
-                <button type="submit">Search</button>
+                <button>Search</button>
             </form>
             {recipeSearch && <p>Results for {recipeSearch}...</p>}
 
