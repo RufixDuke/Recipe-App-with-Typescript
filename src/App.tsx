@@ -19,6 +19,7 @@ function App() {
         const form = event.target as HTMLFormElement;
         const input = form.querySelector("#searchText") as HTMLInputElement;
         setRecipeSearch(input.value);
+        input.value = "";
         console.log(setRecipeSearch(input.value));
     };
 
@@ -43,14 +44,14 @@ function App() {
                     placeholder="Enter your recipe....."
                     // onChange={(e) => setRecipeSearch(e)}
                 />
-                <button>Search</button>
+                <button type="submit">Search</button>
             </form>
             {recipeSearch && <p>Results for {recipeSearch}...</p>}
 
             <div>
                 {recipesFound &&
                     recipesFound.map((recipe) => (
-                        <Recipe key={recipe.idMeal} recipe={recipe} />
+                        <Recipe key={recipe.idMeal} recipe={recipe}></Recipe>
                     ))}
             </div>
         </div>
