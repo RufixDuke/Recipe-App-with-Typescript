@@ -28,6 +28,7 @@ function App() {
             if (query) {
                 const response = await searchForRecipes(query);
                 setRecipesFound(response);
+                console.log(setRecipesFound(response));
             }
         })();
     }, [recipeSearch]);
